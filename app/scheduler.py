@@ -48,5 +48,5 @@ def run_recompute_job():
 def start_scheduler():
   scheduler = BackgroundScheduler()
   # hourly recompute; adjust as needed
-  scheduler.add_job(run_recompute_job, "interval", hours=1, id="recs-hourly")
+  scheduler.add_job(run_recompute_job, "interval", hours=3, id="recs-hourly")
   scheduler.start()
